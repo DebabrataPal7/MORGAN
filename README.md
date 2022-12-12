@@ -22,12 +22,12 @@ In MORGAN, one generator with input as a high noise variance vector produces pse
 
 The following packages are required to run the scripts:
 
-- [Tensorflow 2.x](https://www.tensorflow.org/)
-- [opencv 4.1.0](https://pypi.org/project/opencv-python/)
-- [numpy 1.16.4](https://numpy.org/)
-- [scipy 1.3.0](https://scipy.org/)
-- [sklearn 0.21.2](https://scikit-learn.org/stable/)
-- [matplotlib 3.1.1](https://matplotlib.org/)
+- [Tensorflow 2.8.0](https://www.tensorflow.org/)
+- [opencv 4.1.2](https://pypi.org/project/opencv-python/)
+- [numpy 1.21.5](https://numpy.org/)
+- [scipy 1.4.1](https://scipy.org/)
+- [sklearn 1.0.2](https://scikit-learn.org/stable/)
+- [matplotlib 3.2.2](https://matplotlib.org/)
 
 ## Dataset
 
