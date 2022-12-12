@@ -1,8 +1,8 @@
-# MORGAN
+# Meta-learning-based Open-set Recognition via Generative Adversarial Network (MORGAN)
 
 The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/papers/Pal_XX_WACV_2023_paper.pdf) (WACV'23) in Tensorflow. 
 
-## Few-Shot Open-Set Recognition of Hyperspectral Images with Outlier Calibration Network
+### Abstract
 
 In few-shot open-set recognition (FSOSR) for hyperspectral images (HSI), one major challenge arises due to the simultaneous presence of spectrally fine-grained known classes and outliers. Prior research on generative FSOSR cannot handle such a situation due to their inability to approximate the open space prudently. To address this issue, we propose a method, Meta-learning-based Open-set Recognition via Generative Adversarial Network (MORGAN), that can learn a finer separation between the closed and the open spaces. MORGAN seeks to generate class-conditioned adversarial samples for both the closed and open spaces in the few-shot regime using two GANs by judiciously tuning noise variance while ensuring discriminability using a novel Anti-Overlap Latent (AOL) regularizer. Adversarial samples from low noise variance amplify known class data density, and we use samples from high noise variance to augment known-unknowns. A first-order episodic strategy is adapted to ensure stability in the GAN training. Finally, we introduce a combination of metric losses which push these augmented known-unknowns or outliers to disperse in the open space while condensing known class distributions. Extensive experiments on four benchmark HSI datasets indicate that MORGAN achieves state-of-the-art FSOSR performance consistently.
 
@@ -16,7 +16,7 @@ First, Feature extractor produces support features for the known classes and que
 
 <img src='Imgs/Fig4_AOL6.jpg' width='400' height='150'>
 
-To disentangle overlapping noise vectors that can produce adversarial outliers (pseudo-unknown samples) with equivalent feature representation to that of pseudo-known samples, we define AOL regularizer.
+In MORGAN, one generator with input as a high noise variance vector produces pseudo-unknown samples to enrich the open space. Similarly, another generator with input as a low noise variance vector produces pseudo-known samples to enrich the closed space. Then, to disentangle these adversarial outliers (pseudo-unknown samples) from pseudo-known samples, we define AOL regularizer. 
 
 ## Prerequisites
 
