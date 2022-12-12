@@ -14,7 +14,7 @@ First, Feature extractor produces support features for the known classes and que
 
 ### Anti-overlap latent regularizer
 
-<img src='Imgs/Fig4_AOL6.jpg' width='450' height='180'>
+<img src='Imgs/Fig4_AOL6.jpg' width='400' height='150'>
 
 To disentangle overlapping noise vectors that can produce adversarial outliers (pseudo-unknown samples) with equivalent feature representation to that of pseudo-known samples, we define AOL regularizer.
 
@@ -40,7 +40,7 @@ Download from (https://hyperspectral.ee.uh.edu/?page_id=459)
  
 ## Open-Set Recognition result
 
-<img src='Imgs/Fig6_ClassificationMap2.png' width='600' height='300'>
+<img src='Imgs/Fig6_ClassificationMap2.png' width='600' height='400'>
 Comparison of 5-shot FSOSR classification maps by SOTA methods, namely b) PEELER (c) SnaTCHer (d) OCN, and proposed (e) MORGAN over (Top) Salinas (Middle) University of Pavia and (Bottom) Indian Pines. The ground truth is shown in (a) for each dataset with the open classes annotated in ‘White’ color.  
 
 ## Citation
