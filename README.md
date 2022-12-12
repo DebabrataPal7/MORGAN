@@ -1,6 +1,6 @@
 # MORGAN
 
-The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/papers/Pal_XX_WACV_2023_paper.pdf) (WACV'22) in Tensorflow. 
+The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/papers/Pal_XX_WACV_2023_paper.pdf) (WACV'23) in Tensorflow. 
 
 ## Few-Shot Open-Set Recognition of Hyperspectral Images with Outlier Calibration Network
 
@@ -8,13 +8,13 @@ In few-shot open-set recognition (FSOSR) for hyperspectral images (HSI), one maj
 
 ### MORGAN Architecture
 
-<img src='Imgs/Fig3_Architecture.jpg' width='700' height='150'>
+<img src='Imgs/Fig3_Architecture.jpg' width='700' height='250'>
 
 First, Feature extractor produces support features for the known classes and query features for a combination of known and pseudo-unknown classes. Then, an adversarial process optimizes a latent vector sampled from isotropic Gaussian to produce pseudo-known features, which is augmented with support features to enrich the closed-set distribution, and prototypes are computed. To enrich open space, we augment query features with pseudo-unknown samples obtained by sampling another Gaussian noise with high noise variance. Outlier detector classifies a query from augmented query set as an outlier based on its Euclidean distance from prototypes. For known query prediction, we obtain its class by applying softmax over query distance.
 
 ### Anti-overlap latent regularizer
 
-<img src='Imgs/Fig4_AOL6.png' width='900'>
+<img src='Imgs/Fig4_AOL6.jpg' width='450' height='180'>
 
 To disentangle overlapping noise vectors that can produce adversarial outliers (pseudo-unknown samples) with equivalent feature representation to that of pseudo-known samples, we define AOL regularizer.
 
@@ -40,7 +40,7 @@ Download from (https://hyperspectral.ee.uh.edu/?page_id=459)
  
 ## Open-Set Recognition result
 
-<img src='Imgs/Fig6_ClassificationMap2.png' width='900' height='150'>
+<img src='Imgs/Fig6_ClassificationMap2.png' width='600' height='300'>
 Comparison of 5-shot FSOSR classification maps by SOTA methods, namely b) PEELER (c) SnaTCHer (d) OCN, and proposed (e) MORGAN over (Top) Salinas (Middle) University of Pavia and (Bottom) Indian Pines. The ground truth is shown in (a) for each dataset with the open classes annotated in ‘White’ color.  
 
 ## Citation
