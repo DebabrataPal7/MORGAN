@@ -1,1 +1,56 @@
 # MORGAN
+
+The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/papers/Pal_XX_WACV_2023_paper.pdf) (WACV'22) in Tensorflow. 
+
+## Few-Shot Open-Set Recognition of Hyperspectral Images with Outlier Calibration Network
+
+In few-shot open-set recognition (FSOSR) for hyperspectral images (HSI), one major challenge arises due to the simultaneous presence of spectrally fine-grained known classes and outliers. Prior research on generative FSOSR cannot handle such a situation due to their inability to approximate the open space prudently. To address this issue, we propose a method, Meta-learning-based Open-set Recognition via Generative Adversarial Network (MORGAN), that can learn a finer separation between the closed and the open spaces. MORGAN seeks to generate class-conditioned adversarial samples for both the closed and open spaces in the few-shot regime using two GANs by judiciously tuning noise variance while ensuring discriminability using a novel Anti-Overlap Latent (AOL) regularizer. Adversarial samples from low noise variance amplify known class data density, and we use samples from high noise variance to augment known-unknowns. A first-order episodic strategy is adapted to ensure stability in the GAN training. Finally, we introduce a combination of metric losses which push these augmented known-unknowns or outliers to disperse in the open space while condensing known class distributions. Extensive experiments on four benchmark HSI datasets indicate that MORGAN achieves state-of-the-art FSOSR performance consistently.
+
+### MORGAN Architecture
+
+<img src='Imgs/Fig3_Architecture.jpg' width='700' height='150'>
+
+First, Feature extractor produces support features for the known classes and query features for a combination of known and pseudo-unknown classes. Then, an adversarial process optimizes a latent vector sampled from isotropic Gaussian to produce pseudo-known features, which is augmented with support features to enrich the closed-set distribution, and prototypes are computed. To enrich open space, we augment query features with pseudo-unknown samples obtained by sampling another Gaussian noise with high noise variance. Outlier detector classifies a query from augmented query set as an outlier based on its Euclidean distance from prototypes. For known query prediction, we obtain its class by applying softmax over query distance.
+
+### Anti-overlap latent regularizer
+
+<img src='Imgs/Fig4_AOL6.png' width='900'>
+
+To disentangle overlapping noise vectors that can produce adversarial outliers (pseudo-unknown samples) with equivalent feature representation to that of pseudo-known samples, we define AOL regularizer.
+
+## Prerequisites
+
+The following packages are required to run the scripts:
+
+- [Tensorflow 2.x](https://www.tensorflow.org/)
+- [opencv 4.1.0](https://pypi.org/project/opencv-python/)
+- [numpy 1.16.4](https://numpy.org/)
+- [scipy 1.3.0](https://scipy.org/)
+- [sklearn 0.21.2](https://scikit-learn.org/stable/)
+- [matplotlib 3.1.1](https://matplotlib.org/)
+
+## Dataset
+
+### Indian Pines, Salinas, Pavia University
+Download from (http://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes) 
+
+### Houston-2013
+Download from (https://hyperspectral.ee.uh.edu/?page_id=459)
+
+ 
+## Open-Set Recognition result
+
+<img src='Imgs/Fig6_ClassificationMap2.png' width='900' height='150'>
+Comparison of 5-shot FSOSR classification maps by SOTA methods, namely b) PEELER (c) SnaTCHer (d) OCN, and proposed (e) MORGAN over (Top) Salinas (Middle) University of Pavia and (Bottom) Indian Pines. The ground truth is shown in (a) for each dataset with the open classes annotated in ‘White’ color.  
+
+## Citation
+If you use any content of this repo for your work, please cite the following bib entry:
+
+	@InProceedings{Pal_2023_WACV,
+    author    = {Pal, Debabrata and Bose, Shirsha and and Banerjee, Biplab and Jeppu, Yogananda},
+    title     = {MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2023},
+    pages     = {XX-XX}
+	}
