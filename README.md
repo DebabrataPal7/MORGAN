@@ -58,3 +58,9 @@ If you use any content of this repo for your work, please cite the following bib
     year      = {2023},
     pages     = {XX-XX}
 	}
+
+
+## Licence
+MORGAN is released under the MIT license. See https://github.com/DebabrataPal7/MORGAN/blob/main/LICENSE for details.
+
+Copyright (c) 2022 Debabrata Pal, Ltd. All rights reserved.
