@@ -1,6 +1,6 @@
 # Meta-learning-based Open-set Recognition via Generative Adversarial Network (MORGAN)
 
-The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/papers/Pal_XX_WACV_2023_paper.pdf) (WACV'23) in Tensorflow. 
+The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/html/Pal_MORGAN_Meta-Learning-Based_Few-Shot_Open-Set_Recognition_via_Generative_Adversarial_Network_WACV_2023_paper.html) (WACV'23) in Tensorflow. 
 
 ### Abstract
 
@@ -51,14 +51,13 @@ Comparison of 5-shot FSOSR classification maps by SOTA methods, namely b) PEELER
 If you use any content of this repo for your work, please cite the following bib entry:
 
 	@InProceedings{Pal_2023_WACV,
-    author    = {Pal, Debabrata and Bose, Shirsha and and Banerjee, Biplab and Jeppu, Yogananda},
-    title     = {MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network},
+    author    = {Pal, Debabrata and Bose, Shirsha and Banerjee, Biplab and Jeppu, Yogananda},
+    title     = {MORGAN: Meta-Learning-Based Few-Shot Open-Set Recognition via Generative Adversarial Network},
     booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
     month     = {January},
     year      = {2023},
-    pages     = {XX-XX}
+    pages     = {6295-6304}
 	}
-
 
 ## Licence
 MORGAN is released under the MIT license. 
