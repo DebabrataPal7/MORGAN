@@ -1,6 +1,6 @@
 # Meta-learning-based Open-set Recognition via Generative Adversarial Network (MORGAN)
 
-The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/html/Pal_MORGAN_Meta-Learning-Based_Few-Shot_Open-Set_Recognition_via_Generative_Adversarial_Network_WACV_2023_paper.html) (WACV'23) in Tensorflow. 
+The code repository for "MORGAN: Meta-Learning-based Few-Shot Open-Set Recognition via Generative Adversarial Network" [[paper]](https://openaccess.thecvf.com/content/WACV2023/papers/Pal_MORGAN_Meta-Learning-Based_Few-Shot_Open-Set_Recognition_via_Generative_Adversarial_Network_WACV_2023_paper.pdf) (WACV'23) in Tensorflow. 
 
 ### Abstract
 
